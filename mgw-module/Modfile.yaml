@@ -6,7 +6,7 @@ type: add-on
 deploymentType: single
 dependencies:
   github.com/SENERGY-Platform/mgw-test-module-a:
-    version: =v0.0.2
+    version: =v0.0.1
     requiredServices:
       server:
         - refVar: MQTT_BROKER
@@ -15,4 +15,4 @@ dependencies:
 services:
   publisher:
     name: Publisher
-    image: publisher:local
+    image: ghcr.io/senergy-platform/mgw-test-module-b-publisher:0.0.1
