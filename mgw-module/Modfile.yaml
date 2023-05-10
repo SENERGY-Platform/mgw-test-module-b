@@ -27,7 +27,7 @@ configs:
     targets:
       - refVar: C1
         services:
-          - a
+          - publisher
     userInput:
       name: Config 1
       description: Some text value.
@@ -45,7 +45,7 @@ configs:
     targets:
       - refVar: C2
         services:
-          - a
+          - publisher
     userInput:
       name: Config 2
       description: List of text values.
@@ -65,7 +65,7 @@ configs:
     targets:
       - refVar: C3
         services:
-          - a
+          - publisher
     userInput:
       name: Config 3
       description: The alphabet with duplicates.
@@ -81,7 +81,7 @@ configs:
     targets:
       - refVar: C4
         services:
-          - a
+          - publisher
     userInput:
       name: Config 4
       description: Select alternative option.
@@ -96,7 +96,7 @@ configs:
     targets:
       - refVar: C5
         services:
-          - a
+          - publisher
     userInput:
       name: Config 5
       description: Select from range.
