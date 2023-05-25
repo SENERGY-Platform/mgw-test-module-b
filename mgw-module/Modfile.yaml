@@ -1,7 +1,7 @@
 modfileVersion: "v1"
 id: github.com/SENERGY-Platform/mgw-test-module-b/mgw-module
 name: MQTT publisher
-version: v0.0.9
+version: v0.1.0
 type: add-on
 deploymentType: single
 serviceReferences:
@@ -18,6 +18,13 @@ dependencies:
           services:
             - publisher
             - publisher2
+  github.com/SENERGY-Platform/mgw-test-module-b/mgw-module-2:
+    version: ">=v0.0.1;<v1.0.0"
+    requiredServices:
+      publisher:
+        - refVar: TEST
+          services:
+            - publisher
 services:
   publisher:
     name: Publisher
