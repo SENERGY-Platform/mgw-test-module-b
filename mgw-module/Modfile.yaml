@@ -11,7 +11,7 @@ serviceReferences:
         - publisher
 dependencies:
   github.com/SENERGY-Platform/mgw-test-module-a:
-    version: =v0.0.1
+    version: <v2.0.0
     requiredServices:
       server:
         - refVar: MQTT_BROKER
