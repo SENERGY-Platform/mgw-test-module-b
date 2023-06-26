@@ -1,7 +1,7 @@
 modfileVersion: "v1"
 id: github.com/SENERGY-Platform/mgw-test-module-b/mgw-module
 name: MQTT publisher
-version: v0.1.2
+version: v0.1.3
 type: add-on
 deploymentType: single
 serviceReferences:
@@ -88,22 +88,6 @@ configs:
       name: Config 3
       description: The alphabet with duplicates.
       group: cfg
-  c4:
-    value: 1
-    options:
-      - 1
-      - 2
-      - 3
-    type: number
-    dataType: int
-    targets:
-      - refVar: C4
-        services:
-          - publisher
-    userInput:
-      name: Config 4
-      description: Select alternative option.
-      group: cfg
   c5:
     type: number
     typeOptions:
@@ -119,6 +103,22 @@ configs:
       name: Config 5
       description: Select from range.
       group: adv
+  c6:
+    value: 2
+    options:
+      - 2
+      - 3
+      - 4
+    type: number
+    dataType: int
+    targets:
+      - refVar: C6
+        services:
+          - publisher
+    userInput:
+      name: Config 6
+      description: Select alternative option.
+      group: cfg
 inputGroups:
   cfg:
     name: Configuration
