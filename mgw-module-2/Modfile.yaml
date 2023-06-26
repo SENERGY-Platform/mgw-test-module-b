@@ -1,7 +1,7 @@
 modfileVersion: "v1"
 id: github.com/SENERGY-Platform/mgw-test-module-b/mgw-module-2
 name: MQTT publisher
-version: v0.0.3
+version: v0.0.4
 type: add-on
 deploymentType: single
 dependencies:
@@ -16,3 +16,41 @@ services:
   publisher:
     name: Publisher
     image: ghcr.io/senergy-platform/mgw-test-module-b-publisher:0.0.1
+configs:
+  c1:
+    type: text
+    typeOptions:
+      regex: ^[a-zA-Z0-9-_]+$
+      min_len: 3
+      max_len: 15
+    dataType: string
+    targets:
+      - refVar: C1
+        services:
+          - publisher
+    userInput:
+      name: Config 1
+      description: Some text value.
+      group: cfg
+    optional: true
+  c2:
+    value:
+      - test
+    type: text
+    typeOptions:
+      regex: ^[a-zA-Z0-9]+$
+      max_len: 10
+    dataType: string
+    isList: true
+    targets:
+      - refVar: C2
+        services:
+          - publisher
+    userInput:
+      name: Config 2
+      description: List of text values.
+      group: cfg
+inputGroups:
+  cfg:
+    name: Configuration
+    description: Change stuff ...
