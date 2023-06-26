@@ -33,7 +33,7 @@ dependencies:
     version: ">=v0.0.1;<v1.0.0"
     requiredServices:
       publisher:
-        - refVar: TEST
+        - refVar: TEST2
           services:
             - publisher
 services:
