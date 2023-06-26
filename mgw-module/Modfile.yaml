@@ -9,7 +9,7 @@ serviceReferences:
     - refVar: P2
       services:
         - publisher
-  publisher6:
+  publisher:
     - refVar: P6
       services:
         - publisher
