@@ -1,7 +1,7 @@
 modfileVersion: "v1"
 id: github.com/SENERGY-Platform/mgw-test-module-b/mgw-module-7
 name: MQTT publisher 7
-version: v0.0.2
+version: v0.0.3
 type: add-on
 deploymentType: single
 dependencies:
@@ -23,8 +23,8 @@ hostResources:
         services:
           - publisher
     userInput:
-      name: Secret 1
-      description: Some secret.
+      name: Device 1
+      description: Some device.
       group: cfg
 secrets:
   s1:
@@ -34,8 +34,8 @@ secrets:
         services:
           - publisher
     userInput:
-      name: Device 1
-      description: Some device.
+      name: Secret 1
+      description: Some secret.
       group: cfg
 configs:
   c1:
