@@ -109,7 +109,7 @@ configs:
     targets:
       - refVar: C4
         services:
-          - a
+          - publisher
     userInput:
       type: number
       name: Config 4
