@@ -1,7 +1,7 @@
 modfileVersion: "v1"
 id: github.com/SENERGY-Platform/mgw-test-module-b/mgw-module-4
 name: MQTT publisher 4
-version: v1.0.0
+version: v1.1.0
 type: add-on
 deploymentType: single
 dependencies:
@@ -19,7 +19,7 @@ services:
 hostResources:
   h1:
     targets:
-      - mountPoint: /opt/api_key
+      - mountPoint: /dev/testUSBTTy
         services:
           - publisher
     userInput:
@@ -28,9 +28,22 @@ hostResources:
       group: cfg
 secrets:
   s1:
-    type: api-key
+    type: basic-auth
     targets:
-      - mountPoint: /dev/testUSBTTy
+      - mountPoint: /opt/user
+        item: username
+        services:
+          - publisher
+      - mountPoint: /opt/pw
+        item: password
+        services:
+          - publisher
+      - refVar: USER_SEC
+        item: username
+        services:
+          - publisher
+      - refVar: PW_SEC
+        item: password
         services:
           - publisher
     userInput:
