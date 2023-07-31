@@ -1,7 +1,7 @@
 modfileVersion: "v1"
 id: github.com/SENERGY-Platform/mgw-test-module-b/mgw-module-5
 name: MQTT publisher 5
-version: v2.0.0
+version: v2.0.1
 type: add-on
 deploymentType: single
 dependencies:
@@ -37,8 +37,8 @@ secrets:
         services:
           - publisher
     userInput:
-      name: Secret 1
-      description: Some secret.
+      name: Basic Auth
+      description: Basic auth test.
       group: cfg
   s2:
     type: api-key
@@ -49,6 +49,10 @@ secrets:
       - refVar: API_KEY_SEC
         services:
           - publisher
+    userInput:
+      name: API Key
+      description: API key test.
+      group: cfg
   s3:
     type: certificate
     targets:
@@ -58,6 +62,10 @@ secrets:
       - refVar: CERT_SEC
         services:
           - publisher
+    userInput:
+      name: Certificate
+      description: certificate test.
+      group: cfg
 inputGroups:
   cfg:
     name: Configuration
